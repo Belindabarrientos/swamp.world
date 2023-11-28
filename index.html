@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+       <head>
+        <title>Swamps</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="About" href="https://en.wikipedia.org/wiki/Animal">
+        <link rel="icon" href="image/faviconibis.png" type="image/png">
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+      </head>
+    
+    <body>
+      
+      <div class="dropdown">
+        <button class="dropbtn">
+
+          <span class="menu">MENU</span>
+          <span class="material-symbols-outlined">arrow_drop_down</span>
+
+        </button>
+        <div class="dropdown-content">
+          <a href="index.html">HOME</a>
+          <a href="about.html">ABOUT</a>
+        </div>
+      </div>
+      
+    
+
+    <!--<h1 id="swimmingtext">swimming through the swamps</h1>-->
+
+     <h1 class="ml6">
+      <span class="text-wrapper">
+        <span class="letters">swimming through the swamps</span>
+      </span>
+    </h1>
+
+
+     
+     <div class="button1">
+        <a href="venture.html" >venture the swamps</a>
+     </div>
+
+     <div class="button2">
+      <a href="chill.html" >chill in the swamps</a>
+   </div>
+
+
+ 
+   <video autoplay loop muted id="puffer" class="buttonSound animate__animated animate__fadeIn">
+        <source src="video/gatorvideo_updated.mp4" type="video/mp4">
+        <source src="video/gatorvideo_updated.ogg" type="video/ogg">
+        Your browser does not support the video tag.
+    </video>
+
+
+
+   <audio preload="auto" autoplay loop id="sound1"  >
+        <source src="sounds/gator_louder.mp3" type="audio/mp3">
+        <source src="sounds/gator_louder.mpeg" type="audio/mpeg">
+      Your browser does not support the audio element.
+      </audio>
+
+     <!-- <iframe src="sounds/gator_louder.mp3" allow="autoplay"></iframe>-->
+     
+   <script>
+    // Wrap every letter in a span
+var textWrapper = document.querySelector('.ml6 .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: false})
+  .add({
+    targets: '.ml6 .letter',
+    translateY: ["1.1em", 0],
+    translateZ: 0,
+    duration: 750,
+    delay: (el, i) => 50 * i
+  }).add({
+    targets: '.ml6',
+    opacity: 1,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+   </script>
+    
+</body>
+
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!--<style>
+        div { 
+          display: block;
+        }
+        </style>-->
+
+
+
+</head>
+
+<body>
+  <nav>
+    <div onclick="history.back()" class="back-btn">
+      <p><span class="material-symbols-outlined">arrow_back</span><span class="bck">Back</span></p>
+    </div>
+
+      <div class="dropdown dd">
+        <button class="dropbtn">
+
+          <span class="menu">MENU</span>
+          <span class="material-symbols-outlined">arrow_drop_down</span>
+
+        </button>
+        <div class="dropdown-content">
+          <a href="index.html">HOME</a>
+          <a href="about.html">ABOUT</a>
+        </div>
+      </div>
+
+
+
+  </nav>
+
+<div>    
+    <h1  id="aboutinfo">At FL Swamps we are passionate advocates for the preservation of swamps, the magnificent and often misunderstood ecosystems that play a crucial role in 
+        our planet's health.</h1>
+
+        
+</div>
+
+
+<!--<div id="audio-control" class="muted">Unmute</div>-->
+   
+    <video autoplay muted id="puffer">
+        <source src="video/swampfog.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <audio autoplay muted id="sound1">
+      <source src="sounds/gator_louder.mp3" type="audio/mp3">
+      <source src="sounds/gator_louder.mpeg" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+
+
+    <script> 
+      $('#audio-control').click(function(){
+  if( $("#puffer").prop('muted') ) {
+        $("#puffer").prop('muted', false);
+        $(this).text('Mute');
+    // or toggle class, style it with a volume icon sprite, change background-position
+  } else {
+    $("#puffer").prop('muted', true);
+    $(this).text('Unmute');
+  }
+});
+      </script>
+    
+
+
+</body>
+
+</html>
